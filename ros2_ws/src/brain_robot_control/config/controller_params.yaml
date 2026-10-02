@@ -1,0 +1,7 @@
+neuromorphic_brain_node:
+  ros__parameters:
+    f_max: 90.0              # Max firing frequency (Hz)
+    d_max: 0.70              # Max sensor detection cutoff range (m) for pillar gaps
+    max_linear_vel: 0.22     # Max linear speed (m/s)
+    max_angular_vel: 1.50    # Max turn rate (rad/s)
+    control_rate_hz: 20.0    # Control cycle frequency (Hz)

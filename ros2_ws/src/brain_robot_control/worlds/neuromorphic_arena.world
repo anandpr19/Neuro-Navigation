@@ -1,0 +1,105 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="neuromorphic_arena">
+    <!-- Sun -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Ground Plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- Bounding Wall North -->
+    <model name="wall_north">
+      <pose>0 5 1.0 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>10 0.2 2.0</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>10 0.2 2.0</size></box></geometry>
+          <material><ambient>0.6 0.6 0.6 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Bounding Wall South -->
+    <model name="wall_south">
+      <pose>0 -5 1.0 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>10 0.2 2.0</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>10 0.2 2.0</size></box></geometry>
+          <material><ambient>0.6 0.6 0.6 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Bounding Wall East -->
+    <model name="wall_east">
+      <pose>5 0 1.0 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.2 10 2.0</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.2 10 2.0</size></box></geometry>
+          <material><ambient>0.6 0.6 0.6 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Bounding Wall West -->
+    <model name="wall_west">
+      <pose>-5 0 1.0 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.2 10 2.0</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.2 10 2.0</size></box></geometry>
+          <material><ambient>0.6 0.6 0.6 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Obstacle Pillar 1 -->
+    <model name="obstacle_pillar_1">
+      <pose>1.5 1.5 0.5 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry><cylinder><radius>0.4</radius><length>1.0</length></cylinder></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.4</radius><length>1.0</length></cylinder></geometry>
+          <material><ambient>0.8 0.2 0.2 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Obstacle Pillar 2 -->
+    <model name="obstacle_pillar_2">
+      <pose>-1.5 -1.5 0.5 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry><cylinder><radius>0.5</radius><length>1.0</length></cylinder></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.5</radius><length>1.0</length></cylinder></geometry>
+          <material><ambient>0.2 0.2 0.8 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>
